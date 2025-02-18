@@ -52,9 +52,6 @@ src/
 ## ⭐ Acknowledgments
 This project was developed to provide a modern e-commerce solution with a focus on user experience and performance.
 
-## © License
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
-
 ## 📸 Screenshots
 ### 🏠 Homepage  
 <img src="/photos/Home1.png" alt="Homepage" width="600"/>
@@ -68,8 +65,9 @@ This project is licensed under the MIT License. See the `LICENSE` file for more 
 ### 💳 Checkout  (Soon)
 [Checkout screenshot placeholder]
 
-## 📞 Support
-For questions or issues, please open an issue in the repository: [Project_Eccomerce_REACT](https://github.com/CaioLira18/Project_Eccomerce_REACT/issues)
+## © License
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
 
----
-Developed with ❤️ by [Caio Lira](https://github.com/CaioLira18)
+
+
+
