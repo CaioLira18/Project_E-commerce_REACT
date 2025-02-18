@@ -52,10 +52,6 @@ src/
 ## ⭐ Acknowledgments
 This project was developed to provide a modern e-commerce solution with a focus on user experience and performance.
 
-## 📸 Screenshots
-### 🏠 Homepage  
-<img src="/photos/Home1.png" alt="Homepage" width="600"/>
-
 ### 🛍️ Product Catalog  (Soon)
 [Product catalog screenshot placeholder]
 
