@@ -53,13 +53,10 @@ src/
 This project was developed to provide a modern e-commerce solution with a focus on user experience and performance.
 
 ### 🛍️ Product Catalog  (Soon)
-[Product catalog screenshot placeholder]
 
 ### 🛒 Shopping Cart  (Soon)
-[Shopping cart screenshot placeholder]
 
 ### 💳 Checkout  (Soon)
-[Checkout screenshot placeholder]
 
 ## © License
 This project is licensed under the MIT License. See the `LICENSE` file for more details.
