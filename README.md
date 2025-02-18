@@ -1,4 +1,4 @@
-🛍️ E-commerce Project
+# 🛍️ E-commerce Project
 Um projeto moderno de e-commerce desenvolvido com React e tecnologias web fundamentais.
 📋 Sobre o Projeto
 Este e-commerce foi construído utilizando React junto com HTML5, CSS e JavaScript para criar uma experiência de compra online fluida e responsiva. O projeto oferece uma interface intuitiva para os usuários navegarem por produtos, gerenciarem seu carrinho de compras e finalizarem pedidos.
