@@ -1,31 +1,26 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { ShoppingCart } from "lucide-react"; // Ícone do carrinho
+import { Link } from "lucide-react";
 
-const Header = () => {
+const Header = ({ cartCount, id }) => {  // Recebendo cartCount corretamente
     return (
-        <>
-            <header>
-                <a className="logo" href="/"><img src="images/logo.svg" alt="logo do e-commerce" /></a>
-                <nav>
-                    <ul className="nav__links">
-                        <li><a href="#">Produtos</a></li>
-                        <li><a href="#">Hardwares</a></li>
-                        <li><a href="#">Sobre</a></li>
-                    </ul>
-                </nav>
-                <a className="cta" href="#">Contato</a>
-                <p className="menu cta">Home</p>
-            </header>
-            
-            <div className="overlay">
-                <a className="close" href="#">&times;</a>
-                <div className="overlay__content">
-                    <a href="#">Services</a>
-                    <a href="#">Projects</a>
-                    <a href="#">About</a>
-                </div>
-            </div>
-        </>
+        <header>
+            <a className="logo" href="/">
+                <h1><img src="images/logo.svg" alt="" />Logo</h1>
+            </a>
+            <nav>
+                <ul className="nav__links">
+                    <li><a href="/">Produtos</a></li>
+                    <li><a href="#">Hardwares</a></li>
+                    <li><a href="#">Sobre</a></li>
+                </ul>
+            </nav>
+            {/* Atualizando carrinho com cartCount */}
+            <a className="cta" href="#" style={{ display: "flex", alignItems: "center", gap: "5px" }}>
+                <ShoppingCart/> Carrinho 0x
+            </a>
+            <p className="menu cta">Home</p>
+        </header>
     );
 };
 

@@ -49,6 +49,10 @@ header {
   cursor: pointer;
 }
 
+.logo h1{
+  color: white;
+}
+
 .nav__links a, 
 .cta,
 .overlay__content a {
@@ -493,6 +497,27 @@ img {
     font-size: 12px;
   }
 }
+
+/* Button Show All */
+
+.main__link {
+  border: 2px solid rgb(116, 116, 116);
+  background-color: transparent;
+  color: black;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 6px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.main__link:hover {
+  color: #fff;
+  background-color: #e65c00; /* Tom mais escuro ao passar o mouse */
+  border: none;
+}
+
 
 footer {
   background-color: #121f39;
