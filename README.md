@@ -59,7 +59,7 @@ This project was developed to provide a modern e-commerce solution with a focus 
 ### 💳 Checkout  (Soon)
 ## 📸 Screenshots
 ### 🏠 Homepage  
-<img src="/images/H1.png" alt="Homepage" width="600"/>
+<img src="/images/1.png" alt="Homepage" width="600"/>
 
 ### 📰 Product Section  
 <img src="/images/2.png" alt="Notice Section 2" width="600"/>
