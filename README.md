@@ -57,6 +57,12 @@ This project was developed to provide a modern e-commerce solution with a focus 
 ### 🛒 Shopping Cart  (Soon)
 
 ### 💳 Checkout  (Soon)
+## 📸 Screenshots
+### 🏠 Homepage  
+<img src="/images/H1.png" alt="Homepage" width="600"/>
+
+### 📰 Product Section  
+<img src="/images/2.png" alt="Notice Section 2" width="600"/>
 
 ## © License
 This project is licensed under the MIT License. See the `LICENSE` file for more details.
