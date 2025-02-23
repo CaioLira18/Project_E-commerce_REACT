@@ -4,18 +4,16 @@ import { Link, useLocation } from 'react-router-dom';
 
 const ItemList = ({ title, itemsArray = [], idPath }) => {
     const location = useLocation();
-    const isItemsPage = location.pathname === "/items"; // Verifica se está na página completa
+    const isItemsPage = location.pathname === "/items"; 
 
-    const [showAll, setShowAll] = useState(isItemsPage); // Mostra tudo se já estiver em "/items"
+    const [showAll, setShowAll] = useState(isItemsPage); 
 
-    // Atualiza o estado se o usuário navegar diretamente para "/items"
     useEffect(() => {
         if (isItemsPage) {
             setShowAll(true);
         }
     }, [isItemsPage]);
 
-    // Exibe todos os itens se showAll for true, senão mostra os primeiros 4
     const visibleItems = showAll ? itemsArray : itemsArray.slice(0, 4);
 
     return (
@@ -23,9 +21,9 @@ const ItemList = ({ title, itemsArray = [], idPath }) => {
             <div className="item-list-header">
                 <div className="main__texts">
                     <h2>{title} Populares</h2>
-                    {/* Se estiver na página completa, exibe "Voltar ao Menu", senão "Mostrar Tudo" */}
+                    {}
                     {showAll ? (
-                        <a href="/">Voltar ao Menu</a>
+                        <a href="/"><button className="main__link"> Voltar Para o Menu</button></a>
                     ) : (
                         <button className="main__link" onClick={() => setShowAll(true)}>Mostrar Tudo</button>
                     )}

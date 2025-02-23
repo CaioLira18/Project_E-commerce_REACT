@@ -11,15 +11,15 @@ const Header = ({ cartCount, id }) => {  // Recebendo cartCount corretamente
             <nav>
                 <ul className="nav__links">
                     <li><a href="/">Produtos</a></li>
-                    <li><a href="#">Hardwares</a></li>
-                    <li><a href="#">Sobre</a></li>
+                    <li><a href="/Hardwares">Hardwares</a></li>
+                    <li><a href="/items">Populares</a></li>
+                    <li><a href="#">Jogos</a></li>
                 </ul>
             </nav>
-            {/* Atualizando carrinho com cartCount */}
+            {}
             <a className="cta" href="#" style={{ display: "flex", alignItems: "center", gap: "5px" }}>
                 <ShoppingCart/> Carrinho 0x
             </a>
-            <p className="menu cta">Home</p>
         </header>
     );
 };

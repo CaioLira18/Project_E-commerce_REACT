@@ -515,9 +515,8 @@ img {
 .main__link:hover {
   color: #fff;
   background-color: #e65c00; /* Tom mais escuro ao passar o mouse */
-  border: none;
+  border: 2px solid #e65c00;
 }
-
 
 footer {
   background-color: #121f39;
@@ -635,7 +634,8 @@ footer {
 .item-list__container {
   display: grid;
   grid-template-columns: repeat(4, minmax(172px, 1fr));
-  gap: 16px;
+  gap: 26px;
+  margin-top: 30px;
 }
 
 .item-list-HQ__container {

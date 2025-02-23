@@ -5,7 +5,8 @@ import Home from './pages/Home';
 import Footer from './components/Footer';
 import Items from './pages/Items';
 import Item from './pages/Item';
-import Hardwares from './pages/hardware';
+import Hardwares from "./pages/Hardwares";
+import Hardware from "./pages/Hardware";
 
 
 
@@ -19,7 +20,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/items" element={<Item />} />
-        <Route path="/Hardware" element={<Hardwares />} />
+        <Route path="/Hardwares" element={<Hardware />} />
+        <Route path="/Hardware/:id" element={<Hardwares />} />
         <Route path="/items/:id" element={<Items />} />
         <Route path="/item/:id" element={<Items setCartCount={setCartCount} />} />
       </Routes>

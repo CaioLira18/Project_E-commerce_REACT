@@ -1,8 +1,8 @@
 import React from "react";
 import Main from "../components/main";
 
-const Hardwares = () => {
+const Hardware = () => {
   return <Main type="hardware" />;
 };
 
-export default Hardwares;
+export default Hardware;

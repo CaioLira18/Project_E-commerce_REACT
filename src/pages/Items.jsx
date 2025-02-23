@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { itemsArray } from "../assets/database/items";
 import '@fortawesome/fontawesome-free/css/all.min.css'; // Ícones do FontAwesome
 
-const Items = ({ setCartCount }) => {  // Recebendo setCartCount corretamente
+const Items = () => {  // Recebendo setCartCount corretamente
     const { id } = useParams(); 
     const item = itemsArray.find(item => item.id === Number(id));
 
