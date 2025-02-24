@@ -1,8 +1,12 @@
-import React from "react";
-import { ShoppingCart } from "lucide-react"; // Ícone do carrinho
-import { Link } from "lucide-react";
+import React, { useState } from "react";
+import { ShoppingCart, Gamepad, Box, Cpu, Star } from "lucide-react"; // Ícones para cada link
 
-const Header = ({ cartCount, id }) => {  // Recebendo cartCount corretamente
+
+
+
+
+const Header = ({cont, setCont}) => {  // Recebendo cartCount corretamente
+
     return (
         <header>
             <a className="logo" href="/">
@@ -12,13 +16,13 @@ const Header = ({ cartCount, id }) => {  // Recebendo cartCount corretamente
                 <ul className="nav__links">
                     <li><a href="/">Produtos</a></li>
                     <li><a href="/Hardwares">Hardwares</a></li>
-                    <li><a href="/items">Populares</a></li>
-                    <li><a href="#">Jogos</a></li>
+                    <li><a href="/items"><Star className="nav__link__icons" />Populares</a></li>
+                    <li><a href="#"><Gamepad className="nav__link__icons" />Jogos</a></li>
                 </ul>
             </nav>
             {}
             <a className="cta" href="#" style={{ display: "flex", alignItems: "center", gap: "5px" }}>
-                <ShoppingCart/> Carrinho 0x
+                <ShoppingCart/> <a href="">Carrinho {cont}x</a>
             </a>
         </header>
     );

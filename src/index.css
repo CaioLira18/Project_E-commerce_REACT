@@ -75,9 +75,13 @@ header {
     position: relative; /* Necessário para o ::after */
     transition: color 0.3s ease;
     text-decoration: none;
-    display: inline-block;
+    display: flex;
     padding-bottom: 5px; /* Espaço para a linha */
+    align-items: center;
+    gap: 8px;
 }
+
+
 
 .nav__links li a::after {
     content: "";
@@ -98,6 +102,15 @@ header {
 
 .nav__links li a:hover::after {
     transform: scaleX(1);
+}
+
+/* */
+.nav__link__icons{
+  align-items: center;
+  margin: 0;
+}
+.nav__link__icons:hover{
+  color: #8a2be2;
 }
 
 
@@ -689,6 +702,8 @@ footer {
     text-align: center;
   }
 }
+
+
 
 @media (max-width: 480px) {
   .item-list {

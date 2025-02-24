@@ -11,19 +11,24 @@ import Hardware from "./pages/Hardware";
 
 
 const App = () => {
-  const [cartCount, setCartCount] = useState(0); // Estado do carrinho
+  // Usando o useState para gerenciar o estado da quantidade do carrinho
+  const [cont, setCont] = useState(0);
+  
+  const cont_increment = () => {
+      setCont(cont + 1); // Atualiza a contagem com o valor incrementado
+  };
+  
   const location = useLocation(); // Pegando a rota atual
-
+  
   return (
     <div>
-      <Header cartCount={cartCount} />
+      <Header cont={cont}/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/items" element={<Item />} />
+        <Route path="/items" element={<Items cont={cont} cont_increment={cont_increment} />} />
         <Route path="/Hardwares" element={<Hardware />} />
         <Route path="/Hardware/:id" element={<Hardwares />} />
-        <Route path="/items/:id" element={<Items />} />
-        <Route path="/item/:id" element={<Items setCartCount={setCartCount} />} />
+        <Route path="/items/:id" element={<Items cont={cont} cont_increment={cont_increment} />} />
       </Routes>
     
       {/* Exibir LeiaMais apenas na página de Notícias */}
