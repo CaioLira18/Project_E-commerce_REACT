@@ -7,6 +7,7 @@ import Items from './pages/Items';
 import Item from './pages/Item';
 import Hardwares from "./pages/Hardwares";
 import Hardware from "./pages/Hardware";
+import Carrinho from "./pages/Carrinho";
 
 
 
@@ -25,6 +26,7 @@ const App = () => {
       <Header cont={cont}/>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/Carrinho" element={<Carrinho />} />
         <Route path="/items" element={<Item cont={cont} cont_increment={cont_increment} />} />
         <Route path="/Hardwares" element={<Hardware />} />
         <Route path="/Hardware/:id" element={<Hardwares />} />

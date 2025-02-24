@@ -7,7 +7,6 @@ const Hardwares = () => {  // Recebendo setCartCount corretamente
     const { id } = useParams(); 
     const hardware = hardwareArray.find(hardware => hardware.id === Number(id));
 
-
     return (
       <div className="item-detail">
         <img src={hardware.image} alt={hardware.name} />
