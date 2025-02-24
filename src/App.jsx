@@ -25,7 +25,7 @@ const App = () => {
       <Header cont={cont}/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/items" element={<Items cont={cont} cont_increment={cont_increment} />} />
+        <Route path="/items" element={<Item cont={cont} cont_increment={cont_increment} />} />
         <Route path="/Hardwares" element={<Hardware />} />
         <Route path="/Hardware/:id" element={<Hardwares />} />
         <Route path="/items/:id" element={<Items cont={cont} cont_increment={cont_increment} />} />

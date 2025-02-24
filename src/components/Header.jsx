@@ -14,8 +14,8 @@ const Header = ({cont, setCont}) => {  // Recebendo cartCount corretamente
             </a>
             <nav>
                 <ul className="nav__links">
-                    <li><a href="/">Produtos</a></li>
-                    <li><a href="/Hardwares">Hardwares </a></li>
+                    <li><a href="/"><Box className="nav__link_icons" />Produtos</a></li>
+                    <li><a href="/Hardwares"><Cpu className="nav__link_icons"/>Hardwares </a></li>
                     <li><a href="/items"><Star className="nav__link__icons" />Populares</a></li>
                     <li><a href="#"><Gamepad className="nav__link__icons" />Jogos</a></li>
                 </ul>
