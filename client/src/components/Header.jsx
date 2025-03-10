@@ -5,9 +5,7 @@ const Header = ({ cont, setCont }) => {
     return (
         <header>
             <a className="logo" href="/">
-                <h1>
-                    <img src="images/logo.svg" alt="" />Logo
-                </h1>
+               <h1>E-Commerce</h1>
             </a>
             <nav>
                 <ul className="nav__links">
@@ -26,10 +24,11 @@ const Header = ({ cont, setCont }) => {
                 </ul>
             </nav>
             <a className="cta" href="/Carrinho" style={{ display: "flex", alignItems: "center", gap: "5px" }}>
-                <ShoppingCart className="nav__link__icons" />
+                <ShoppingCart />
                 Carrinho {cont}x
             </a>
             <a className="cta" href="/Login" style={{ display: "flex", alignItems: "center", gap: "5px" }}>
+            <i className="fas fa-user"></i>
                 Login 
             </a>
         </header>

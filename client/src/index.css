@@ -525,6 +525,10 @@ img {
   transition: background-color 0.3s ease;
 }
 
+.main__texts h2{
+  color: black;
+}
+
 .main__link:hover {
   color: #fff;
   background-color: #e65c00; /* Tom mais escuro ao passar o mouse */
@@ -540,9 +544,7 @@ footer {
   width: 100%;
 }
 
-.footer {
-  margin-top: 40px;
-}
+
 
 .footer-content p {
   margin: 10px ;
@@ -748,6 +750,10 @@ footer {
   letter-spacing: 1px;
 }
 
+.register-text h2{
+  color: white;
+}
+
 .register-button:hover {
   background-color: rgba(140, 14, 183, 0.2);
 }
@@ -762,6 +768,60 @@ h2 {
   color: white;
   font-size: 22px;
   margin-bottom: 20px;
+}
+
+@media screen and (max-width: 320px) {
+  .login-box {
+    padding: 15px;
+  }
+  
+  .user-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .user-icon i {
+    font-size: 24px;
+  }
+}
+
+/* For very large screens */
+@media screen and (min-width: 1200px) {
+  .login-box {
+    max-width: 400px;
+    padding: 50px;
+  }
+  
+  .user-icon {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .user-icon i {
+    font-size: 36px;
+  }
+}
+
+/* For portrait tablets */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .login-box {
+    max-width: 320px;
+  }
+}
+
+/* Fix for iPhone 5/SE and other small devices */
+@media screen and (max-height: 568px) {
+  .login-container {
+    height: auto;
+    min-height: 100vh;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  
+  .login-box {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 
@@ -909,3 +969,169 @@ h2 {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+@media screen and (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      text-align: center;
+  }
+  
+  .footer-content {
+      margin: 5px 0;
+  }
+}
+
+/* Small screen adjustments */
+@media screen and (max-width: 480px) {
+  .footer {
+      padding: 15px 0;
+  }
+  
+  .footer-content p {
+      font-size: 12px;
+      width: 100%;
+  }
+  
+  .footer-content-img img {
+      height: 20px;
+  }
+}
+
+/* Very small screen adjustments */
+@media screen and (max-width: 320px) {
+  .footer-content p {
+      font-size: 11px;
+      width: 50px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .login-box {
+    padding: 15px;
+  }
+
+  .login-container{
+    width: 200px;
+  }
+  
+  .user-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .user-icon i {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .login-box {
+    padding: 15px;
+  }
+
+  .login-container{
+    width: 100%;
+  }
+  
+  .user-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .user-icon i {
+    font-size: 24px;
+  }
+}
+
+/* For very large screens */
+@media screen and (min-width: 1200px) {
+  .login-box {
+    max-width: 400px;
+    padding: 50px;
+  }
+  
+  .user-icon {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .user-icon i {
+    font-size: 36px;
+  }
+}
+
+/* For portrait tablets */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .login-box {
+    max-width: 320px;
+  }
+}
+
+/* Fix for iPhone 5/SE and other small devices */
+@media screen and (max-height: 568px) {
+  .login-container {
+    height: auto;
+    min-height: 100vh;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  
+  .login-box {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .item-detail {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .item-text {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      text-align: center;
+  }
+  
+  .footer-content {
+      margin: 5px 0;
+  }
+  
+  .footer-content-img {
+      margin-top: 10px;
+      justify-content: center;
+  }
+}
+
+/* Small screen adjustments */
+@media screen and (max-width: 480px) {
+  .footer {
+      padding: 15px 0;
+  }
+  
+  .footer-content p {
+      font-size: 12px;
+      width: 300px;
+  }
+  
+  .footer-content-img img {
+      height: 20px;
+  }
+}
+
+/* Very small screen adjustments */
+@media screen and (max-width: 320px) {
+  .footer-content p {
+      font-size: 11px;
+     
+  }
+}
+

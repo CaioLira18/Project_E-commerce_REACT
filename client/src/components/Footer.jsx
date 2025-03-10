@@ -8,8 +8,6 @@ const Footer = () => {
         <div class="footer-content">
             <p>&copy; 2025 E-Commerce. Todos os direitos reservados.</p>
         </div>
-        <div className="footer-content-img">
-        </div>
     </footer>
     
     );
