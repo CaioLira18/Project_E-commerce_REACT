@@ -21,8 +21,6 @@ Welcome to the **E-commerce Project** repository, a modern and interactive onlin
 - **User authentication system with secure login and registration**
 - **Password encryption using Bcrypt for enhanced security**
 - **MySQL database integration for storing user credentials**
-- Secure checkout process
-- Admin panel for product management
 - Responsive design for all devices
 
 ## 🛠 Installation and Execution
@@ -41,31 +39,10 @@ To run the project locally, follow these steps:
    ```sh
    npm install
    ```
-4. **Set up MySQL database:**
-   ```sh
-   # Create a database using your MySQL client
-   CREATE DATABASE ecommerce_db;
-   
-   # Import the provided SQL schema (if available)
-   # or run the migration scripts
-   ```
-
-5. **Configure environment variables:**
-   ```sh
-   # Create a .env file in the root directory with the following variables
-   DB_HOST=localhost
-   DB_USER=your_username
-   DB_PASSWORD=your_password
-   DB_NAME=ecommerce_db
-   JWT_SECRET=your_jwt_secret
-   ```
-
-6. Start the development server:
+4. Start the development server:
    ```sh
    npm start
    ```
-
-The application will be available at `http://localhost:3000/`.
 
 ## 🗂️ Project Structure
 
