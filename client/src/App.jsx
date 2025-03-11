@@ -7,9 +7,9 @@ import Items from './pages/Items';
 import Item from './pages/Item';
 import Hardwares from "./pages/Hardwares";
 import Hardware from "./pages/Hardware";
-import Carrinho from "./pages/Carrinho";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
+import Checkout from "./components/Checkout";
 
 
 
@@ -28,11 +28,11 @@ const App = () => {
       <Header cont={cont}/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Carrinho" element={<Carrinho />} />
+        <Route path="/Checkout" element={<Checkout />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Profile" element={<Profile />} />
         <Route path="/items" element={<Item cont={cont} cont_increment={cont_increment} />} />
-        <Route path="/Hardwares" element={<Hardware />} />
+        <Route path="/Hardwares" element={<Hardware cont={cont} cont_increment={cont_increment} />} />
         <Route path="/Hardware/:id" element={<Hardwares />} />
         <Route path="/items/:id" element={<Items cont={cont} cont_increment={cont_increment} />} />
       </Routes>

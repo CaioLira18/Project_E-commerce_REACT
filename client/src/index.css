@@ -907,6 +907,99 @@ footer {
   margin-bottom: 20px;
 }
 
+/* CheckOut */
+/* Estilos gerais do checkout */
+.checkout-container {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Estilos dos itens do carrinho */
+.checkout-items {
+  border-right: 1px solid #ddd;
+  padding-right: 20px;
+}
+
+.checkout-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 10px;
+}
+
+.checkout-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.checkout-item div {
+  flex: 1;
+}
+
+.checkout-item h3 {
+  margin: 0 0 5px 0;
+}
+
+.checkout-item button {
+  margin-top: 10px;
+  padding: 5px 20px;
+  background: #d9534f;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  display: block;
+}
+
+/* Estilos do total do carrinho */
+.checkout-total {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Estilos do formulário de checkout */
+.checkout-form {
+  padding-left: 20px;
+}
+
+.checkout-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.checkout-form input, .checkout-form select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+
+.checkout-form button {
+  width: 100%;
+  padding: 12px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 320px) {
   .login-box {
     padding: 15px;

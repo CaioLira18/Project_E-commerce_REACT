@@ -73,9 +73,9 @@ const Header = ({ cont, setCont }) => {
                     </li>
                 </ul>
             </nav>
-            <a className="cta" href="/Carrinho" style={{ display: "flex", alignItems: "center", gap: "5px" }}>
+            <a className="cta" href="/Checkout" style={{ display: "flex", alignItems: "center", gap: "5px" }}>
                 <ShoppingCart />
-                Carrinho {cont}x
+                Carrinho
             </a>
             
             {!isAuthenticated ? (
