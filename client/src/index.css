@@ -901,8 +901,8 @@ footer {
   background-color: #7a0c9e;
 }
 
-h2 {
-  color: white;
+.item-list h2 {
+  color: rgb(0, 0, 0);
   font-size: 22px;
   margin-bottom: 20px;
 }
