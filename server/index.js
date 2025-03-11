@@ -56,9 +56,9 @@ app.post("/login", (req, res) => {
                 }
                 
                 if (match) {
-                    return res.send({ msg: "Usuario logado com sucesso" });
+                    res.send({ msg: "Usuario logado com sucesso" });
                 } else {
-                    return res.send({ msg: "Senha incorreta" });
+                    res.send({ msg: "Senha incorreta" });
                 }
             });
         } else {
