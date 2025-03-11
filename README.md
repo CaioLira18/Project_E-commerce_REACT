@@ -90,6 +90,12 @@ This project was developed to provide a modern e-commerce solution with a focus 
 ### 📰 Product Section  
 <img src="/images/2.png" alt="Notice Section 2" width="600"/>
 
+### 🔒 Login Section  
+<img src="/images/4.png" alt="Notice Section 2" width="600"/>
+
+### 👤 Profile Section  
+<img src="/images/3.png" alt="Notice Section 2" width="600"/>
+
 ### 🌐 Mysql   
 <img src="/images/password.png" alt="Notice Section 2" width="600"/>
 
