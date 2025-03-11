@@ -52,7 +52,7 @@ app.post("/login", (req, res) => {
         if (result.length > 0) {
             bcrypt.compare(password, result[0].password, (err, match) => {
                 if (err) {
-                    return res.send({ msg: "Erro ao verificar senha" });
+                    res.send({ msg: "Erro ao verificar senha" });
                 }
                 
                 if (match) {

@@ -1,37 +1,115 @@
-import React from "react";
+import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 import Axios from "axios";
+import Profile from "./Profile";
 
 const Login = () => {
+  // Estado para armazenar os dados do usuário atual
+  const [user, setUser] = useState({
+    email: "",
+    password: "",
+    authenticated: false
+  });
+
   const handleClickRegister = (values) => {
     Axios.post("http://localhost:3001/register", {
       email: values.email,
       password: values.password,
     }).then((response) => {
       alert(response.data.msg);
+    }).catch((error) => {
+      console.error("Erro ao registrar:", error);
+      alert("Erro ao registrar usuário");
     });
   };
 
-  const handleClickLogin = (values) => {
-    Axios.post("http://localhost:3001/login", {
-      email: values.email,
-      password: values.password,
-    }).then((response) => {
-      console.log(response);
+  // Adicione este código dentro da função handleClickLogin no componente Login
+const handleClickLogin = (values) => {
+  Axios.post("http://localhost:3001/login", {
+    email: values.email,
+    password: values.password,
+  }).then((response) => {
+    // Verificar a resposta do servidor
+    console.log("Resposta do servidor:", response);
+    
+    // Se o login for bem-sucedido
+    if (response.data.success || response.status === 200) {
+      // IMPORTANTE: armazenar corretamente no localStorage
+      const userData = {
+        email: values.email,
+        authenticated: true
+      };
+      
+      console.log("Salvando usuário no localStorage:", userData);
+      localStorage.setItem("user", JSON.stringify(userData));
+      
+      // ADICIONE ESTE CÓDIGO para forçar o Header a atualizar
+      window.dispatchEvent(new Event('storage'));
+      
+      // Atualizar o estado do usuário
+      setUser({
+        email: values.email,
+        password: values.password,
+        authenticated: true
+      });
+      
+      alert("Login realizado com sucesso!");
+      
+      // Opcionalmente, redirecione para a página inicial
+      // window.location.href = "/";
+    } else {
+      alert(response.data.msg || "Credenciais inválidas");
+    }
+  }).catch((error) => {
+    console.error("Erro ao fazer login:", error);
+    alert("Erro ao fazer login");
+  });
+};
+
+  const handleLogout = () => {
+    // Limpar o estado do usuário
+    setUser({
+      email: "",
+      password: "",
+      authenticated: false
     });
+    
+    // Remover do localStorage
+    localStorage.removeItem("user");
+    
+    alert("Logout realizado com sucesso!");
   };
+
+  // Verificar se já existe um usuário logado no localStorage ao carregar o componente
+  React.useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      const parsedUser = JSON.parse(storedUser);
+      setUser({
+        ...parsedUser,
+        password: "" // Não armazenamos a senha no localStorage
+      });
+    }
+  }, []);
 
   const validationLogin = yup.object().shape({
-    email: yup.string().email("Não é um email Valido").required("Esse Campo é Obrigatorio"),
-    password: yup.string().min(8, "A Senha deve conter no minimo 8 Caracteres").required(),
+    email: yup.string().email("Não é um email válido").required("Esse campo é obrigatório"),
+    password: yup.string().min(8, "A senha deve conter no mínimo 8 caracteres").required("Esse campo é obrigatório"),
   });
 
   const validationRegister = yup.object().shape({
-    email: yup.string().email("Não é um email Valido").required("Esse Campo é Obrigatorio"),
-    password: yup.string().min(8, "A Senha deve conter no minimo 8 Caracteres").required(),
-    confirmPassword: yup.string().oneOf([yup.ref("password"), null], "As Senhas devem ser iguais"),
+    email: yup.string().email("Não é um email válido").required("Esse campo é obrigatório"),
+    password: yup.string().min(8, "A senha deve conter no mínimo 8 caracteres").required("Esse campo é obrigatório"),
+    confirmPassword: yup.string().oneOf([yup.ref("password"), null], "As senhas devem ser iguais").required("Esse campo é obrigatório"),
   });
+
+  // Renderizar o perfil do usuário se estiver autenticado
+  if (user.authenticated) {
+    return (
+     <Profile/>
+    );
+  }
 
   return (
     <div className="login-container">

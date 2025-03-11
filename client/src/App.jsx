@@ -9,6 +9,7 @@ import Hardwares from "./pages/Hardwares";
 import Hardware from "./pages/Hardware";
 import Carrinho from "./pages/Carrinho";
 import Login from "./components/Login";
+import Profile from "./components/Profile";
 
 
 
@@ -29,6 +30,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/Carrinho" element={<Carrinho />} />
         <Route path="/Login" element={<Login />} />
+        <Route path="/Profile" element={<Profile />} />
         <Route path="/items" element={<Item cont={cont} cont_increment={cont_increment} />} />
         <Route path="/Hardwares" element={<Hardware />} />
         <Route path="/Hardware/:id" element={<Hardwares />} />
