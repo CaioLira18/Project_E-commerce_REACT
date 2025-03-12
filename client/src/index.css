@@ -444,7 +444,7 @@ img {
 
 .button_buy {
   display: inline-block;
-  background-color: #ff6600;
+  background-color: rgba(75, 0, 130, 0.8);
   color: white;
   border: none;
   margin-top: 10px;
@@ -460,12 +460,12 @@ img {
 }
 
 .button_buy:hover {
-  background-color: #2a1100;
+  background-color: rgba(75, 0, 50, 0.8);
   transform: scale(1.05);
 }
 
 .button_buy:active {
-  background-color: #cc5200;
+  background-color: #cc0085;
   transform: scale(0.98);
 }
 
@@ -1044,6 +1044,10 @@ footer {
   background-color: rgba(75, 0, 130, 0.8);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
   color: white;
+}
+
+option {
+  color: black;
 }
 
 /* Estilos do cabeçalho de confirmação */
