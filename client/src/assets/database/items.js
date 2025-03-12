@@ -1,5 +1,4 @@
 import { shuffleArray } from "../../utils/shuffle.js";
-
 import rtxImage  from "../../../imagens_items/rtx3050.png";
 import placaMae  from "../../../imagens_items/placaMae.png";
 import memoriaRam  from "../../../imagens_items/memoriaRam.png";

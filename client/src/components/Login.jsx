@@ -67,19 +67,7 @@ const handleClickLogin = (values) => {
   });
 };
 
-  const handleLogout = () => {
-    // Limpar o estado do usuário
-    setUser({
-      email: "",
-      password: "",
-      authenticated: false
-    });
-    
-    // Remover do localStorage
-    localStorage.removeItem("user");
-    
-    alert("Logout realizado com sucesso!");
-  };
+  
 
   // Verificar se já existe um usuário logado no localStorage ao carregar o componente
   React.useEffect(() => {
