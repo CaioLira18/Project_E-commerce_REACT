@@ -10,6 +10,7 @@ import Hardware from "./pages/Hardware";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
 import Checkout from "./components/Checkout";
+import OrderConfirmation from "./pages/OrderConfirmation";
 
 
 
@@ -31,6 +32,7 @@ const App = () => {
         <Route path="/Checkout" element={<Checkout />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Profile" element={<Profile />} />
+        <Route path="/order-confirmation/:orderId" element={<OrderConfirmation />} />
         <Route path="/items" element={<Item cont={cont} cont_increment={cont_increment} />} />
         <Route path="/Hardwares" element={<Hardware cont={cont} cont_increment={cont_increment} />} />
         <Route path="/Hardware/:id" element={<Hardwares />} />
