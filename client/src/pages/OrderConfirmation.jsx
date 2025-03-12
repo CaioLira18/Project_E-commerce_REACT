@@ -24,22 +24,17 @@ const OrderConfirmation = () => {
   }
 
   return (
-    <div className="confirmation-container" style={{ padding: "20px", maxWidth: "800px", margin: "0 auto", textAlign: "center" }}>
-      <div style={{ 
-        background: "#f0f9f0", 
-        padding: "20px", 
-        borderRadius: "10px",
-        marginBottom: "30px"
-      }}>
-        <i className="fas fa-check-circle" style={{ fontSize: "60px", color: "#4CAF50", marginBottom: "20px" }}></i>
+    <div className="confirmation-container">
+      <div className="confirmation-header">
+        <i className="fas fa-check-circle"></i>
         <h1>Pedido Confirmado!</h1>
         <p>Seu pedido foi realizado com sucesso.</p>
         <p>Número do pedido: <strong>#{orderId}</strong></p>
       </div>
       
-      <div style={{ textAlign: "left", marginBottom: "30px" }}>
+      <div className="confirmation-section">
         <h2>Detalhes do Pedido</h2>
-        <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+        <div className="order-details">
           <div>
             <strong>Email:</strong> {order.userEmail}
           </div>
@@ -62,54 +57,29 @@ const OrderConfirmation = () => {
         </div>
       </div>
       
-      <div style={{ textAlign: "left", marginBottom: "30px" }}>
+      <div className="confirmation-section">
         <h2>Itens do Pedido</h2>
-        <div style={{ marginTop: "10px" }}>
+        <div className="order-items">
           {order.items.map(item => (
-            <div key={item.id} style={{ 
-              display: "flex", 
-              alignItems: "center", 
-              borderBottom: "1px solid #eee",
-              padding: "10px 0"
-            }}>
-              <img 
-                src={item.image} 
-                alt={item.name} 
-                style={{ width: "50px", height: "50px", objectFit: "cover", marginRight: "15px" }}
-              />
-              <div style={{ flex: 1 }}>
-                <div><strong>{item.name}</strong></div>
+            <div key={item.id} className="order-item">
+              <img src={item.image} alt={item.name} />
+              <div className="item-details">
+                <div className="item-name"><strong>{item.name}</strong></div>
                 <div>Quantidade: {item.quantity}</div>
               </div>
-              <div>{item.price}</div>
+              <div className="item-price">{item.price}</div>
             </div>
           ))}
           
-          <div style={{ 
-            marginTop: "20px", 
-            fontWeight: "bold", 
-            fontSize: "18px", 
-            textAlign: "right" 
-          }}>
+          <div className="order-total">
             Total: R$ {order.totalAmount.replace('.', ',')}
           </div>
         </div>
       </div>
       
-      <div style={{ marginTop: "30px" }}>
-        <button 
-          onClick={() => navigate("/")}
-          style={{
-            padding: "10px 20px",
-            background: "#2196F3",
-            color: "white",
-            border: "none",
-            borderRadius: "4px",
-            fontSize: "16px",
-            cursor: "pointer"
-          }}
-        >
-          <i className="fas fa-home" style={{ marginRight: "5px" }}></i>
+      <div className="confirmation-actions">
+        <button onClick={() => navigate("/")} className="home-button">
+          <i className="fas fa-home"></i>
           Voltar à Página Inicial
         </button>
       </div>
